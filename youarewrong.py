@@ -1,68 +1,135 @@
+import json
 import random
 import time
 
 def main():
     # Read the questions and answers from the file
-    with open('questions.txt', 'r') as f:
-        qa_pairs = [line.strip().split('", "') for line in f]
-        qa_pairs = [(q[:-1], a[:-2]) for q, a in qa_pairs]  # strip off extra quotes and commas
+    with open('questions.json', 'r') as f:
+        qa_pairs = json.load(f)
+
+    # List of all answers
+    all_answers = [qa['answer'] for qa in qa_pairs]
 
     # List of insult responses
     insult_responses = [
-        "Wrong! Your answer is so off, it's clear why you're a constant disappointment.",
-        "Incorrect! With answers like that, it's no wonder your mother questions her choices.",
-        "Nope! Your intelligence seems to be as shallow as a puddle.",
-        "False! You couldn't have been more wrong. I bet you still count on your fingers.",
-        "That's incorrect! You must be the reason your parents are so disappointed.",
-        "Wrong! You wouldn't know the right answer if it hit you in the face.",
-        "Nope! I've seen smarter vegetables. At least they know when to be quiet.",
-        "Incorrect! I'm surprised you managed to tie your shoes this morning.",
-        "False! I’ve seen toddlers make better guesses.",
-        "Nope! It's answers like these that give your mother that disappointed look.",
-        "Wrong! Do you even have a brain, or are you always this clueless?",
-        "Incorrect! Your answer was so bad, it made me want to uninstall myself.",
-        "False! It's answers like yours that make people question the education system.",
-        "Nope! I bet your high school science teacher is disappointed in you right now.",
-        "Wrong! With that kind of logic, I'm surprised you remember how to breathe.",
-        "Incorrect! It's no wonder you're the reason for your mother's stress wrinkles.",
-        "False! It's clear that you're the personification of an undercooked noodle.",
-        "Nope! That's so wrong, even a broken pencil point is sharper than you.",
-        "Incorrect! It's clear why people don't ask you for help in trivia games.",
-        "False! Even a stopped clock is right twice a day, but not you."
+        "Wrong! Your answer is bad and you should feel bad. This is why your parents are always so disappointed.",
+        "Incorrect! Did your brain take a vacation today?",
+        "You're wrong again. Does it hurt being this wrong all the time?",
+        "Nope! Your lack of knowledge is astonishing.",
+        "Wrong! You're the reason this country needs to invest more in education.",
+        "Wrong again! You're slower than a herd of snails traveling through peanut butter.",
+        "Incorrect! With thinking like that, I now understand why you’re in this situation.",
+        "Nope! Your guess was so far off, it's almost impressive.",
+        "Wrong! It's astonishing that you can function in society.",
+        "Incorrect! I can't believe how incredibly wrong you are.",
+        "Wrong! This is why everyone talks about you behind your back.",
+        "Nope! Do you even listen to yourself when you speak?",
+        "Incorrect! Your wrongness is the stuff of legends.",
+        "Wrong! I was hoping for incompetence, but you exceeded even my expectations.",
+        "Incorrect! I see the education system has failed you.",
+        "Nope! You couldn’t pour water out of a boot if the instructions were on the heel.",
+        "Wrong! Your parents must be so proud of you right now.",
+        "Incorrect! If I were you, I would have hidden my ignorance a bit better.",
+        "Nope! I guess you prove that even god makes mistakes sometimes.",
+        "Wrong! I don’t know what makes you so stupid, but it really works."
     ]
 
     # List of passive-aggressive responses for correct answers
     correct_responses = [
-        "Well, aren't you a smarty pants? I bet you think you're really clever now.",
-        "Correct. How surprising.",
-        "Oh, you got it. Do you want a medal or something?",
-        "Yes, that's right. Even a broken clock is right twice a day.",
-        "Congratulations, you managed to get one right. Your mother must be so proud.",
-        "Oh, you got it correct. Must be a lucky guess.",
-        "Correct. Even a stopped clock tells the right time twice a day.",
-        "Well, you're not as dumb as you look.",
-        "You got it right. Did you use Google for that?",
-        "Hmm, correct. Maybe you do have a couple of brain cells rubbing together after all."
+        "Correct! I’m genuinely shocked. You must have guessed.",
+        "Right! Well, even a broken clock is right twice a day.",
+        "Correct. Don't get too excited, it's just one question.",
+        "Wow! You got it. You must have cheated, right?",
+        "Correct! This doesn't mean I respect your intelligence.",
+        "Oh my! A right answer. Did you ask your smarter friend for help?",
+        "Hooray! You got one. Even a blind squirrel finds a nut occasionally.",
+        "Correct! I suppose even the sun shines on a dog's rear end some days.",
+        "Surprisingly, you're right! I bet you're as shocked as I am.",
+        "Wow, you got it! Even a stopped clock is right twice a day.",
+        "Right, for once. Don't let it get to your head.",
+        "Correct. A miraculous guess, I presume.",
+        "Oh, you got one. How quaint.",
+        "Finally, a right answer. Was it as painful for you as it was for me?",
+        "Correct. A momentary lapse, no doubt.",
+        "Right. Don't think this changes my opinion of you.",
+        "Congratulations! You managed to stumble upon the correct answer.",
+        "I can't believe it, but that's actually correct.",
+        "Well done. A fluke, surely.",
+        "Even a broken clock is right twice a day, I guess."
     ]
 
-    # Choose a random question and answer pair
-    question, correct_answer = random.choice(qa_pairs)
-    for char in question:
-        print(char, end='', flush=True)
-        time.sleep(0.02)
-    print()
-    
-    # Get the user's answer
-    user_answer = input("> ")
-    
-    # Check if their answer is correct
-    if user_answer.lower() == correct_answer.lower():
-        response = random.choice(correct_responses)
-    else:
-        response = random.choice(insult_responses)
-    
-    # Print the response, one character at a time
-    for char in response:
+    # List of final responses based on score
+    low_score_responses = [
+        "Your score is so low, it's no wonder you didn't graduate from high school.",
+        "With a score like that, I'm surprised you can tie your own shoes.",
+        "I've seen snails with more cognitive prowess than what you've demonstrated here.",
+        "Your score is an embarrassment. Even a pigeon would have performed better.",
+        "You should consider wearing a helmet at all times."
+    ]
+
+    mediocre_score_responses = [
+        "You're as mediocre as they come. But hey, at least you're consistent.",
+        "Wow, an average score. You must be used to this kind of mediocrity.",
+        "Your score is like lukewarm water, neither hot nor cold. Just meh.",
+        "Congratulations on being perfectly average. It must be so exciting being you.",
+        "Your score is the epitome of mediocrity. I guess that's something?"
+    ]
+
+    high_score_responses = [
+        "Wow, you look dimmer than a burnt-out lightbulb but you managed to answer most of them right.",
+        "Your score is high. I'm as surprised as you are. Did you cheat?",
+        "I can't believe you got this many right. You must be having a lucky day.",
+        "I'm honestly shocked you managed to get such a high score. No really, I am.",
+        "Well aren't you a smarty pants? Now don't let this go to your head."
+    ]
+
+    score = 0
+    total_questions = 0
+
+    while True:
+        # Choose a random question and answer pair
+        qa_pair = random.choice(qa_pairs)
+        question, correct_answer = qa_pair['question'], qa_pair['answer']
+
+        # Generate multiple-choice answers
+        incorrect_answers = random.sample([a for a in all_answers if a != correct_answer], 3)
+        options = incorrect_answers + [correct_answer]
+        random.shuffle(options)  # Randomize the order of the options
+
+        for char in question:
+            print(char, end='', flush=True)
+            time.sleep(0.02)
+        print()
+
+        # Print the options
+        for i, option in enumerate(options, start=1):
+            print(f"{i}. {option}")
+        print("5. Exit quiz")
+
+        # Get the user's answer
+        user_answer = input("> ")
+
+        # Check if user wants to exit
+        if user_answer == "5":
+            percentage = (score/total_questions) * 100
+            if percentage < 70:
+                response = random.choice(low_score_responses)
+            elif percentage < 80:
+                response = random.choice(mediocre_score_responses)
+            else:
+                response = random.choice(high_score_responses)
+            print(f"Your score: {score}/{total_questions}. {response}")
+            break
+
+        # Check if the user's answer is correct
+        if options[int(user_answer)-1] == correct_answer:
+            print_slow(random.choice(correct_responses))
+            score += 1
+        else:
+            print_slow(random.choice(insult_responses))
+
+def print_slow(str):
+    for char in str:
         print(char, end='', flush=True)
         time.sleep(0.02)
     print()
