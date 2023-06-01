@@ -1,205 +1,256 @@
 [
   {
+    "topic": "Geography",
     "question": "What is the capital of Australia?",
     "answer": "Canberra"
   },
   {
+    "topic": "Art",
     "question": "Who painted the famous artwork 'Starry Night'?",
     "answer": "Vincent van Gogh"
   },
   {
+    "topic": "Geography",
     "question": "Which country is famous for the ancient ruins of Machu Picchu?",
     "answer": "Peru"
   },
   {
+    "topic": "Chemistry",
     "question": "What is the chemical symbol for iron?",
     "answer": "Fe"
   },
   {
+    "topic": "Astronomy",
     "question": "Which planet is known as the 'Red Planet'?",
     "answer": "Mars"
   },
   {
+    "topic": "Literature",
     "question": "Who wrote the novel 'Pride and Prejudice'?",
     "answer": "Jane Austen"
   },
   {
+    "topic": "Geography",
     "question": "What is the largest ocean in the world?",
     "answer": "Pacific Ocean"
   },
   {
+    "topic": "Physics",
     "question": "Which famous scientist developed the theory of general relativity?",
     "answer": "Albert Einstein"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national animal of Canada?",
     "answer": "Beaver"
   },
   {
+    "topic": "Geography",
     "question": "In which city would you find the famous landmark Big Ben?",
     "answer": "London"
   },
   {
+    "topic": "Space Exploration",
     "question": "Who was the first person to step foot on the moon?",
     "answer": "Neil Armstrong"
   },
   {
+    "topic": "Music",
     "question": "Which musical instrument has 88 keys?",
     "answer": "Piano"
   },
   {
+    "topic": "Biology",
     "question": "What is the largest organ in the human body?",
     "answer": "Skin"
   },
   {
+    "topic": "Biology",
     "question": "Which famous scientist is known for his theory of evolution?",
     "answer": "Charles Darwin"
   },
   {
+    "topic": "Geography",
     "question": "Which country is home to the tallest mountain in the world, Mount Everest?",
     "answer": "Nepal"
   },
   {
+    "topic": "Chemistry",
     "question": "What is the chemical symbol for sodium?",
     "answer": "Na"
   },
   {
+    "topic": "Art",
     "question": "Who painted the ceiling of the Sistine Chapel?",
     "answer": "Michelangelo"
   },
   {
+    "topic": "Biology",
     "question": "What is the largest species of shark?",
     "answer": "Whale shark"
   },
   {
+    "topic": "Literature",
     "question": "Which famous playwright wrote 'Romeo and Juliet'?",
     "answer": "William Shakespeare"
   },
   {
+    "topic": "Geography",
     "question": "What is the capital of Brazil?",
     "answer": "Brasília"
   },
   {
+    "topic": "Astronomy",
     "question": "Which planet is known as the 'Giant of the Solar System'?",
     "answer": "Jupiter"
   },
   {
+    "topic": "Art",
     "question": "Who painted the famous artwork 'The Last Supper'?",
     "answer": "Leonardo da Vinci"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national flower of Japan?",
     "answer": "Cherry blossom"
   },
   {
+    "topic": "Physics",
     "question": "Which famous scientist is known for his theory of gravity?",
     "answer": "Isaac Newton"
   },
   {
+    "topic": "Geography",
     "question": "What is the largest continent in the world?",
     "answer": "Asia"
   },
   {
+    "topic": "Literature",
     "question": "Who is the author of the 'Harry Potter' book series?",
     "answer": "J.K. Rowling"
   },
   {
+    "topic": "Chemistry",
     "question": "What is the chemical symbol for oxygen?",
     "answer": "O"
   },
   {
+    "topic": "Art",
     "question": "Who painted the famous artwork 'The Starry Night'?",
     "answer": "Vincent van Gogh"
   },
   {
+    "topic": "Geography",
     "question": "Which country is known for the Great Barrier Reef?",
     "answer": "Australia"
   },
   {
+    "topic": "Geography",
     "question": "What is the capital of Spain?",
     "answer": "Madrid"
   },
   {
+    "topic": "Physics",
     "question": "Which famous scientist is known for his theory of relativity?",
     "answer": "Albert Einstein"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national animal of Australia?",
     "answer": "Kangaroo"
   },
   {
+    "topic": "Geography",
     "question": "In which city is the famous statue of Christ the Redeemer located?",
     "answer": "Rio de Janeiro"
   },
   {
+    "topic": "Music",
     "question": "Who was the lead vocalist of the band Queen?",
     "answer": "Freddie Mercury"
   },
   {
+    "topic": "Geography",
     "question": "What is the largest desert in the world?",
     "answer": "Sahara Desert"
   },
   {
+    "topic": "Physics",
     "question": "Which famous scientist developed the laws of motion?",
     "answer": "Isaac Newton"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national bird of the United States?",
     "answer": "Bald eagle"
   },
   {
+    "topic": "Literature",
     "question": "Who wrote the novel 'To Kill a Mockingbird'?",
     "answer": "Harper Lee"
   },
   {
+    "topic": "Chemistry",
     "question": "What is the chemical symbol for helium?",
     "answer": "He"
   },
   {
+    "topic": "Art",
     "question": "Who painted the famous artwork 'Girl with a Pearl Earring'?",
     "answer": "Johannes Vermeer"
   },
   {
+    "topic": "Biology",
     "question": "Which animal is known for its black and white stripes?",
     "answer": "Zebra"
   },
   {
+    "topic": "Geography",
     "question": "What is the capital of Canada?",
     "answer": "Ottawa"
   },
   {
+    "topic": "Astronomy",
     "question": "Which planet is known as the 'Blue Planet'?",
     "answer": "Earth"
   },
   {
+    "topic": "Literature",
     "question": "Who wrote the play 'Romeo and Juliet'?",
     "answer": "William Shakespeare"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national flower of the United States?",
     "answer": "Rose"
   },
   {
+    "topic": "Geography",
     "question": "In which country would you find the Great Wall?",
     "answer": "China"
   },
   {
+    "topic": "Chemistry",
     "question": "What is the chemical symbol for carbon?",
     "answer": "C"
   },
   {
+    "topic": "Art",
     "question": "Who painted the famous artwork 'The Persistence of Memory'?",
     "answer": "Salvador Dalí"
   },
   {
+    "topic": "Geography",
     "question": "What is the tallest mountain in Africa?",
     "answer": "Mount Kilimanjaro"
   },
   {
+    "topic": "Physics",
     "question": "Which famous scientist is known for his laws of motion?",
     "answer": "Isaac Newton"
   },
   {
+    "topic": "National Symbols",
     "question": "What is the national animal of China?",
     "answer": "Giant panda"
   }
