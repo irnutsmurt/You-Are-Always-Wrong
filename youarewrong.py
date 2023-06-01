@@ -10,78 +10,15 @@ def main():
     # List of all answers
     all_answers = [qa['answer'] for qa in qa_pairs]
 
-    # List of insult responses
-    insult_responses = [
-        "Wrong! Your answer is bad and you should feel bad. This is why your parents are always so disappointed.",
-        "Incorrect! Did your brain take a vacation today?",
-        "You're wrong again. Does it hurt being this wrong all the time?",
-        "Nope! Your lack of knowledge is astonishing.",
-        "Wrong! You're the reason this country needs to invest more in education.",
-        "Wrong again! You're slower than a herd of snails traveling through peanut butter.",
-        "Incorrect! With thinking like that, I now understand why you’re in this situation.",
-        "Nope! Your guess was so far off, it's almost impressive.",
-        "Wrong! It's astonishing that you can function in society.",
-        "Incorrect! I can't believe how incredibly wrong you are.",
-        "Wrong! This is why everyone talks about you behind your back.",
-        "Nope! Do you even listen to yourself when you speak?",
-        "Incorrect! Your wrongness is the stuff of legends.",
-        "Wrong! I was hoping for incompetence, but you exceeded even my expectations.",
-        "Incorrect! I see the education system has failed you.",
-        "Nope! You couldn’t pour water out of a boot if the instructions were on the heel.",
-        "Wrong! Your parents must be so proud of you right now.",
-        "Incorrect! If I were you, I would have hidden my ignorance a bit better.",
-        "Nope! I guess you prove that even god makes mistakes sometimes.",
-        "Wrong! I don’t know what makes you so stupid, but it really works."
-    ]
+    # Read the responses from the file
+    with open('responses.json', 'r') as f:
+        responses = json.load(f)
 
-    # List of passive-aggressive responses for correct answers
-    correct_responses = [
-        "Correct! I’m genuinely shocked. You must have guessed.",
-        "Right! Well, even a broken clock is right twice a day.",
-        "Correct. Don't get too excited, it's just one question.",
-        "Wow! You got it. You must have cheated, right?",
-        "Correct! This doesn't mean I respect your intelligence.",
-        "Oh my! A right answer. Did you ask your smarter friend for help?",
-        "Hooray! You got one. Even a blind squirrel finds a nut occasionally.",
-        "Correct! I suppose even the sun shines on a dog's rear end some days.",
-        "Surprisingly, you're right! I bet you're as shocked as I am.",
-        "Wow, you got it! Even a stopped clock is right twice a day.",
-        "Right, for once. Don't let it get to your head.",
-        "Correct. A miraculous guess, I presume.",
-        "Oh, you got one. How quaint.",
-        "Finally, a right answer. Was it as painful for you as it was for me?",
-        "Correct. A momentary lapse, no doubt.",
-        "Right. Don't think this changes my opinion of you.",
-        "Congratulations! You managed to stumble upon the correct answer.",
-        "I can't believe it, but that's actually correct.",
-        "Well done. A fluke, surely.",
-        "Even a broken clock is right twice a day, I guess."
-    ]
-
-    # List of final responses based on score
-    low_score_responses = [
-        "Your score is so low, it's no wonder you didn't graduate from high school.",
-        "With a score like that, I'm surprised you can tie your own shoes.",
-        "I've seen snails with more cognitive prowess than what you've demonstrated here.",
-        "Your score is an embarrassment. Even a pigeon would have performed better.",
-        "You should consider wearing a helmet at all times."
-    ]
-
-    mediocre_score_responses = [
-        "You're as mediocre as they come. But hey, at least you're consistent.",
-        "Wow, an average score. You must be used to this kind of mediocrity.",
-        "Your score is like lukewarm water, neither hot nor cold. Just meh.",
-        "Congratulations on being perfectly average. It must be so exciting being you.",
-        "Your score is the epitome of mediocrity. I guess that's something?"
-    ]
-
-    high_score_responses = [
-        "Wow, you look dimmer than a burnt-out lightbulb but you managed to answer most of them right.",
-        "Your score is high. I'm as surprised as you are. Did you cheat?",
-        "I can't believe you got this many right. You must be having a lucky day.",
-        "I'm honestly shocked you managed to get such a high score. No really, I am.",
-        "Well aren't you a smarty pants? Now don't let this go to your head."
-    ]
+    insult_responses = responses['insult_responses']
+    correct_responses = responses['correct_responses']
+    low_score_responses = responses['low_score_responses']
+    mediocre_score_responses = responses['mediocre_score_responses']
+    high_score_responses = responses['high_score_responses']
 
     score = 0
     total_questions = 0
