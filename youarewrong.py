@@ -14,11 +14,11 @@ def main():
     with open('responses.json', 'r') as f:
         responses = json.load(f)
 
-    insult_responses = responses['insult_responses']
-    correct_responses = responses['correct_responses']
-    low_score_responses = responses['low_score_responses']
-    mediocre_score_responses = responses['mediocre_score_responses']
-    high_score_responses = responses['high_score_responses']
+    insult_responses = responses['incorrect']
+    correct_responses = responses['correct']
+    low_score_responses = responses['low_score']
+    mediocre_score_responses = responses['medium_score']
+    high_score_responses = responses['high_score']
 
     score = 0
     total_questions = 0
@@ -33,10 +33,7 @@ def main():
         options = incorrect_answers + [correct_answer]
         random.shuffle(options)  # Randomize the order of the options
 
-        for char in question:
-            print(char, end='', flush=True)
-            time.sleep(0.02)
-        print()
+        print_slow(f"{qa_pair['topic']}\n{question}")
 
         # Print the options
         for i, option in enumerate(options, start=1):
@@ -55,8 +52,10 @@ def main():
                 response = random.choice(mediocre_score_responses)
             else:
                 response = random.choice(high_score_responses)
-            print(f"Your score: {score}/{total_questions}. {response}")
+            print_slow(f"Your score: {score}/{total_questions}. {response}")
             break
+
+        total_questions += 1
 
         # Check if the user's answer is correct
         if options[int(user_answer)-1] == correct_answer:
