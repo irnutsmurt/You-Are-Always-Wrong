@@ -1,0 +1,67 @@
+{
+    "insult_responses": [
+        "Wrong! Your answer is bad and you should feel bad. This is why your parents are always so disappointed.",
+        "Incorrect! Did your brain take a vacation today?",
+        "You're wrong again. Does it hurt being this wrong all the time?",
+        "Nope! Your lack of knowledge is astonishing.",
+        "Wrong! You're the reason this country needs to invest more in education.",
+        "Wrong again! You're slower than a herd of snails traveling through peanut butter.",
+        "Incorrect! With thinking like that, I now understand why you’re in this situation.",
+        "Nope! Your guess was so far off, it's almost impressive.",
+        "Wrong! It's astonishing that you can function in society.",
+        "Incorrect! I can't believe how incredibly wrong you are.",
+        "Wrong! This is why everyone talks about you behind your back.",
+        "Nope! Do you even listen to yourself when you speak?",
+        "Incorrect! Your wrongness is the stuff of legends.",
+        "Wrong! You couldn't have been more wrong if you tried.",
+        "Incorrect! I'm starting to feel bad about how wrong you always are.",
+        "Wrong again! I guess this is just your thing.",
+        "Nope! Your wrong answers are starting to become impressive in their consistency.",
+        "Wrong! I think I might cry from how wrong that was.",
+        "Incorrect! If you were any more wrong, you'd be a circle.",
+        "Wrong! Your wrongness is now reaching astronomical proportions."
+    ],
+    "correct_responses": [
+        "Correct. I can't believe it. This must be a fluke.",
+        "Right, even a broken clock is right twice a day.",
+        "Correct. Well, isn't that a pleasant surprise?",
+        "Right. This must be the high point of your day.",
+        "Correct. You're smarter than you look, apparently.",
+        "Right. Even a stopped clock is right twice a day.",
+        "Correct. Wow, you actually knew something.",
+        "Right. This must be a very proud moment for you.",
+        "Correct. That's the most impressive thing you've done today.",
+        "Right. I didn't think you had it in you.",
+        "Correct. That's probably the first thing you've done right all day.",
+        "Right. I guess you're not as stupid as you look.",
+        "Correct. I didn't think you had it in you.",
+        "Right. Did someone help you with that answer?",
+        "Correct. You must have cheated.",
+        "Right. You got lucky this time.",
+        "Correct. Did you look that up while I wasn't looking?",
+        "Right. Well, aren't you a little know-it-all?",
+        "Correct. Is this your idea of fun?",
+        "Right. Is someone feeding you answers?"
+    ],
+    "low_score_responses": [
+        "Your score is so low, it's no wonder you didn't graduate from high school.",
+        "With a score like that, I'm surprised you can tie your own shoes.",
+        "I've seen snails with more cognitive prowess than what you've demonstrated here.",
+        "Your score is an embarrassment. Even a pigeon would have performed better.",
+        "You should consider wearing a helmet at all times."
+    ],
+    "mediocre_score_responses": [
+        "You're as mediocre as they come. But hey, at least you're consistent.",
+        "Wow, an average score. You must be used to this kind of mediocrity.",
+        "Your score is like lukewarm water, neither hot nor cold. Just meh.",
+        "Congratulations on being perfectly average. It must be so exciting being you.",
+        "Your score is the epitome of mediocrity. I guess that's something?"
+    ],
+    "high_score_responses": [
+        "Wow, you look dimmer than a burnt-out lightbulb but you managed to answer most of them right.",
+        "Your score is high. I'm as surprised as you are. Did you cheat?",
+        "I can't believe you got this many right. You must be having a lucky day.",
+        "I'm honestly shocked you managed to get such a high score. No really, I am.",
+        "Well aren't you a smarty pants? Now don't let this go to your head."
+    ]
+}
