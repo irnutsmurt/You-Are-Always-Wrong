@@ -2,9 +2,10 @@ import random
 import time
 
 def main():
-    # Read the questions from the file
+    # Read the questions and answers from the file
     with open('questions.txt', 'r') as f:
-        questions = [line.strip() for line in f]
+        qa_pairs = [line.strip().split('", "') for line in f]
+        qa_pairs = [(q[:-1], a[:-2]) for q, a in qa_pairs]  # strip off extra quotes and commas
 
     # List of insult responses
     insult_responses = [
@@ -27,25 +28,43 @@ def main():
         "False! It's clear that you're the personification of an undercooked noodle.",
         "Nope! That's so wrong, even a broken pencil point is sharper than you.",
         "Incorrect! It's clear why people don't ask you for help in trivia games.",
-        "False! Even a stopped clock is right twice a day, but not you.",
-        "Nope! You're like the end pieces of a loaf of bread. Everyone touches you, but nobody wants you.",
-        "Wrong! I can't believe you'd get something so simple incorrect. What would your mother say?"
+        "False! Even a stopped clock is right twice a day, but not you."
     ]
 
+    # List of passive-aggressive responses for correct answers
+    correct_responses = [
+        "Well, aren't you a smarty pants? I bet you think you're really clever now.",
+        "Correct. How surprising.",
+        "Oh, you got it. Do you want a medal or something?",
+        "Yes, that's right. Even a broken clock is right twice a day.",
+        "Congratulations, you managed to get one right. Your mother must be so proud.",
+        "Oh, you got it correct. Must be a lucky guess.",
+        "Correct. Even a stopped clock tells the right time twice a day.",
+        "Well, you're not as dumb as you look.",
+        "You got it right. Did you use Google for that?",
+        "Hmm, correct. Maybe you do have a couple of brain cells rubbing together after all."
+    ]
 
-
-    question = random.choice(questions)
-    for character in question:
-        print(character, end='', flush=True)
-        time.sleep(0.01) #adjust number for the text to print slower or faster
+    # Choose a random question and answer pair
+    question, correct_answer = random.choice(qa_pairs)
+    for char in question:
+        print(char, end='', flush=True)
+        time.sleep(0.02)
     print()
     
-    answer = input('Your answer: ')
+    # Get the user's answer
+    user_answer = input("> ")
     
-    response = random.choice(insult_responses)
-    for character in response:
-        print(character, end='', flush=True)
-        time.sleep(0.01) #adjust number for the text to print slower or faster
+    # Check if their answer is correct
+    if user_answer.lower() == correct_answer.lower():
+        response = random.choice(correct_responses)
+    else:
+        response = random.choice(insult_responses)
+    
+    # Print the response, one character at a time
+    for char in response:
+        print(char, end='', flush=True)
+        time.sleep(0.02)
     print()
 
 if __name__ == "__main__":
