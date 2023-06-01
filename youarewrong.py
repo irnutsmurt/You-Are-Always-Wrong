@@ -1,4 +1,5 @@
 import random
+import time
 
 def main():
     # Read the questions from the file
@@ -30,9 +31,18 @@ def main():
     ]
 
     question = random.choice(questions)
-    print(question)
+    for character in question:
+        print(character, end='', flush=True)
+        time.sleep(0.05)
+    print()
+    
     answer = input('Your answer: ')
     
-    print(random.choice(insult_responses))
+    response = random.choice(insult_responses)
+    for character in response:
+        print(character, end='', flush=True)
+        time.sleep(0.05)
+    print()
 
 if __name__ == "__main__":
+    main()
